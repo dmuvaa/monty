@@ -36,10 +36,6 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
-void push(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number);
-
 void process_file(FILE *file, stack_node_t **stack);
 void process_line(char *line, unsigned int line_number, stack_node_t **stack);
 void execute_instruction(const char *opcode, const char *arg, unsigned int line_number, stack_node_t **stack);
